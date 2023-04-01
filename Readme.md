@@ -22,7 +22,7 @@ We first define a module that a caption of <code>length n and generates the n+1 
 
 Made use of the VGG16 model as the base model for the CNN. We replace the last softmax layer freeze with another affine layer with 256 output and add a dropout layer. The original layers of the VGG16 model is frozen. The image is input into the input of the VGG16 layer. The GLOVE embedding parameters are also frozen. Words are fed as input to the embedding. The output of the embedding is fed into an LSTM RNN with 256 states. The output of the LSTM (256 dimensionss) and the output of the CNN (256 dimensions) is concatenated together to for a 512 dimensional input to a dense layer. The output of the dense layer is fed into a softmax function.
 
-> [model_concat image]
+> [model_concat image](https://github.com/ohthatspaul/image__captioning/blob/main/model_concat.png)
 
 At each time step of the RNN the a word in the training caption will be fed into the input of the RNN. The out of the RNN will be compared with the ground truth next word. The training captions were tokenized and embedded using the GLOVE word embeddings. The embeddings were fed into the RNN.
 
