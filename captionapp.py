@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import os 
+import keras
 from os import listdir
 from pickle import load
 from keras.applications.vgg16 import VGG16
