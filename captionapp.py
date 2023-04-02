@@ -68,8 +68,11 @@ featureExtraction = st.container()
 modelTraining = st.container()
 modelValidation = st.container()
 userValidation = st.container()
+menuNavigation = st.container()
+
 
 def main(): 
+
     with header:
         st.title('Image Captioning Using RNN + CNN ')
      
@@ -90,7 +93,7 @@ def main():
 
         st.title("Try it out yourself!")
 
-        caption_image_fileName = st.file_uploader("Upload an Image", type=["jpg","jpeg", "jpg"])
+        caption_image_fileName = st.file_uploader("Upload an Image", type=["jpg","jpeg", "jpg","png"])
         if caption_image_fileName is not None:
              st.success("Image Uploaded")
 
